@@ -29,7 +29,12 @@ var dashboard = new ParseDashboard({
     "iconName": "ROdiaspora.png",
   }],
   "iconsFolder": "icons",
-  "trustProxy": trustProxy
+  "trustProxy": trustProxy,
+  "users": [{
+    "user": process.env.USER || '',
+    "pass": process.env.PASSWORD || ''
+  }],
+  "useEncryptedPasswords": true
 }, allowInsecureHTTP);
 
 app.use('/parse', api);
