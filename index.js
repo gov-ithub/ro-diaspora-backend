@@ -36,4 +36,7 @@ app.use('/parse', api);
 app.use('/dashboard', dashboard);
 
 var httpServer = require('http').createServer(app);
-httpServer.listen(4040);
+var port = process.env.PORT || 4040;
+httpServer.listen(port, function() {
+  console.log('ROdiaspora backend running on port ' + port + '.'); 
+});
