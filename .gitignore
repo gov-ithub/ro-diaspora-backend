@@ -2,3 +2,4 @@ npm-debug.log
 logs/
 *.swp
 node_modules/
+.env
