@@ -17,6 +17,9 @@ var api = new ParseServer({
   "serverURL": serverURL,
 });
 
+var allowInsecureHTTP = false;
+var trustProxy = true;
+
 var dashboard = new ParseDashboard({
   "apps": [{
     "appId": appId,
@@ -25,8 +28,9 @@ var dashboard = new ParseDashboard({
     "appName": "ROdiaspora",
     "iconName": "ROdiaspora.png",
   }],
-  "iconsFolder": "icons"
-});
+  "iconsFolder": "icons",
+  "trustProxy": trustProxy
+}, allowInsecureHTTP);
 
 app.use('/parse', api);
 app.use('/dashboard', dashboard);
