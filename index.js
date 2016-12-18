@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({silent: true});
 
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
