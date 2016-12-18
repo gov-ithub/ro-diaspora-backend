@@ -14,6 +14,12 @@
     },
     "DATABASE_URI": {
       "required": true
+    },
+    "USER": {
+      "required": true
+    },
+    "PASSWORD": {
+      "required": true
     }
   },
   "image": "heroku/nodejs",
